@@ -33,4 +33,6 @@ model Task {
   status String @default("pending")
   workFlowId Int
   workflow WorkFlow @relation(fields: [workFlowId], references: [id])
+  triggerType    String?
+  triggerDetails String?
 }
